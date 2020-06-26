@@ -1,3 +1,8 @@
+export interface ItunesApiResult {
+	resultCount: number;
+	results: SongResult[];
+}
+
 export interface SongResult {
 	wrapperType: string;
 	kind: string;
@@ -18,7 +23,7 @@ export interface SongResult {
 	artworkUrl100: string;
 	collectionPrice: number;
 	trackPrice: number;
-	releaseDate: Date;
+	releaseDate: string;
 	collectionExplicitness: string;
 	trackExplicitness: string;
 	discCount: number;
@@ -30,10 +35,7 @@ export interface SongResult {
 	currency: string;
 	primaryGenreName: string;
 	isStreamable: boolean;
+	collectionArtistId?: number;
+	collectionArtistName?: string;
+	collectionArtistViewUrl?: string;
 }
-
-export interface ItunesApiResult {
-	resultCount: number;
-	results: SongResult[];
-}
-
