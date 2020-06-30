@@ -20,11 +20,11 @@ export class DomController {
 
 	addSong(song: SongResult, number: number) {
 		const row = `
-    <tr>
-      <th scope="row">${number}.</th>
-      <td>${song.trackName}</td>
-      <td>${song.artistName}</td>
-    </tr>
+			<tr>
+				<th scope="row">${number}.</th>
+				<td>${song.trackName}</td>
+				<td>${song.artistName}</td>
+			</tr>
     `;
 
 		this.tbody.append(row);
