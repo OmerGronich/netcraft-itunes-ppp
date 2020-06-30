@@ -8,12 +8,12 @@ const apiController = new ApiController();
 domController.form.submit(async (e) => {
 	e.preventDefault();
 
-	const searchResult = domController.searchInput.val() as string;
+	const searchTerm = domController.searchInput.val() as string;
 
 	try {
 		domController.startLoading();
 
-		const songs = (await apiController.getResults(searchResult)).results;
+		const songs = (await apiController.getResults(searchTerm)).results;
 
 		domController.stopLoading();
 

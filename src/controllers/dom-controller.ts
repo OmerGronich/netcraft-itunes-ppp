@@ -21,7 +21,7 @@ export class DomController {
 	addSong(song: SongResult, number: number) {
 		const row = `
 			<tr>
-				<th scope="row">${number}.</th>
+				<th scope="row">${number + 1}.</th>
 				<td>${song.trackName}</td>
 				<td>${song.artistName}</td>
 			</tr>
